@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>toggleClass demo</title>
+
+  <style>
+  div {
+    width: 100px;
+    height: 20px;
+    background-color: #ccc;
+    overflow: hidden;
+    position: relative;
+    top: 300px;
+  }
+  .openLegend {
+    width: 200px;
+    height: 200px;
+    background-color: #00f;
+    transition-duration: 500ms;
+    position: relative;
+    top: 100px;
+}
+    
+  </style>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+ 
+   <div><span> legend     </span> <span class="open"><img id="spin" src="up.png"></span>
+    <section> 
+        <p class="legendContent">
+        <ul>
+        <li></li>
+        
+        </ul>   
+        </p>
+        </section>
+    </div>
+ 
+<script>
+$( ".open" ).click(function() {
+  $( "div" ).toggleClass( "big-blue");
+});
+    
+$( "#spin" ).click(function() {
+    if (  $( this ).css( "transform" ) == 'none' ){
+        $(this).css("transform","rotate(180deg)");
+    } else {
+        $(this).css("transform","" );
+    }
+});
+</script>
+ 
+</body>
+</html>

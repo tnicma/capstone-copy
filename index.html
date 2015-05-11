@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script type="text/javascript" src="myscript.js"></script>
+
+
+    <title></title>
+
+    <!-- Behavioral Meta Data -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+</head>
+<body>
+<div class="wrapper">
+<header>
+<!-- popup window -->
+<div id="boxes">
+  <div id="dialog" class="window">
+    <p> Hi! Welcome to The Gentrification Project. This is where instructions for using the website will go.</p>
+    <div id="popupfoot"> <button href="#" class="quit agree btn">Thanks, I got it!</a></div>
+  </div>
+  <div id="mask"></div>
+</div>
+    
+    
+<div class="titleBar">    
+<section class="logo">
+    <span><img src="images/logo.svg"> </span>
+    <span> the gentrification project</span>
+    <span class="nav" role="navigation"> 
+        <ul>
+            <li> <a href="#modal-about"> about the project</a></li>
+            <li> <a href="#modal-contact"> contact </a></li>
+        </ul>
+
+    </span>
+</section>
+</div>
+<div class="clearfix"></div>
+</header> 
+
+<div class="content">
+
+    
+<!-- about % content modals -->
+<div id="modal-about" class="modal">
+	<div>
+		<a href="#close" title="Close" class="close">close</a>
+		<h2>about the gentrification project</h2>
+        
+		<p><img src="images/Charlotte-Skyline.jpg">This is where information about the gentrification project will go. I will talk about whiy i chose to do the project, the neighborhood, etc. Whatever banh mi messenger bag vinyl american apparel readymade, VHS scenester lo-fi vegan single-origin coffee 8-bit put a bird on it. Mustache art party etsy yr salvia gentrify echo park beard wes anderson, readymade synth cred DIY irony. Freegan twee fap, mixtape synth whatever tumblr vinyl butcher. Before they sold out put a bird on it cardigan tattooed mixtape scenester. Twee DIY thundercats tumblr salvia sustainable. Marfa food truck seitan messenger bag quinoa master cleanse. Cosby sweater irony helvetica cardigan cliche leggings. 
+
+Craft beer irony banksy whatever, wes anderson brunch readymade fixie vegan fanny pack organic mlkshk you probably haven't heard of them gentrify. Terry richardson scenester vegan, VHS artisan lomo lo-fi raw denim cliche readymade wolf next level high life brunch. Seitan vinyl trust fund salvia jean shorts beard marfa, high life vegan yr thundercats food truck etsy twee blog. Viral beard four loko stumptown vegan keytar. Banksy VHS PBR organic twee, Austin cred carles sartorial farm-to-table. Portland echo park readymade, whatever organic sustainable 8-bit homo tumblr raw denim PBR scenester retro. Vegan single-origin coffee high life messenger bag, mcsweeney's hoodie wes anderson Austin sustainable. 
+</p>
+	</div>
+</div>    
+<div id="modal-contact" class="modal">
+	<div>
+		<a href="#close" title="Close" class="close">close</a>
+		<h2>contact me</h2>
+		<p>This is where I will have contact information</p>
+	</div>
+</div>   
+    
+<div class="map">
+    
+    
+<section class="map-pins">
+    <a href="#modal-soulshine"><img id="soulshine-pin" class="pins" src="images/purplePin.png"></a> 
+    <div id="modal-soulshine" class="modal">
+       <div>
+            <a href="#close" title="Close" class="close"> close </a>
+            <h2> Soulshine Farms:</h2>
+            <span class="ss-info"> 3 years in Belmont</span>
+           <iframe width="450" height="253" src="https://www.youtube.com/embed/q6c3fqEO7Vo" frameborder="0" allowfullscreen></iframe>
+        
+           <p> This paragraph will have stuff in it about the video that is on the right hand side. It will just be general information, such as facts or key sayings from their interview.</p>
+           <p>Freegan twee fap, mixtape synth whatever tumblr vinyl butcher. Before they sold out put a bird on it cardigan tattooed mixtape scenester. Twee DIY thundercats tumblr salvia sustainable. Marfa food truck seitan messenger bag quinoa master cleanse. Cosby sweater irony helvetica cardigan cliche leggings. Craft beer irony banksy whatever, wes anderson brunch readymade fixie vegan fanny pack organic mlkshk you probably haven't heard of them gentrify.</p>
+           
+       </div>     
+    </div>
+    
+    
+</section> <!-- map pins -->
+<section>
+    <div class="legend"><span id="legend-title"> legend     </span> <span class="open"><img id="spin" src="images/up.svg"></span>
+    <section> 
+        <div class="legend-content">
+            <ul>
+        <li> <img class="legend-colors" src="images/redBox.png"> residents </li>
+        <li> <img class="legend-colors" src="images/greenBox.png"> houses for sale </li> 
+        <li> <img class="legend-colors" src="images/orangeBox.png"> businesses </li>
+        <li> <img class="legend-colors" src="images/purpBox.png"> public places </li>
+            </ul>
+         </div>
+               
+        </section>
+    </div>
+           
+</section><!-- legend-->
+</div> <!-- map div -->
+</div> <!-- content div -->   
+</div>  
+
+<script>
+$( ".open" ).click(function() {
+  $( ".legend" ).toggleClass( "openLegend", 100, "easeInOutQuad");
+});
+    
+$( "#spin" ).click(function() {
+    if (  $( this ).css( "transform" ) == 'none' ){
+        $(this).css("transform","rotate(180deg)");
+    } else {
+        $(this).css("transform","" );
+    }
+});    
+</script>    
+</body>
+</html>
+
+

@@ -1,0 +1,278 @@
+/*CSS Stylesheet */
+
+/********************************/
+/* fonts*/
+
+@font-face {
+  font-family: 'Argh';
+  src: url('fonts/aaargh.ttf');
+}
+
+@font-face {
+  font-family: 'SilentHill';
+  src: url('fonts/SLNTHLC.ttf');
+}
+
+@font-face {
+  font-family: 'Moonflower';
+  src: url('fonts/Moon Flower Bold.ttf');
+}
+
+body { margin: 0;}
+ul, ol {list-style: none;}
+.clearfix {clear: both;}
+
+/*wrapper */
+.wrapper {
+    max-height: 500px;
+    width: 100%; 
+    margin: 0 auto;
+}
+
+.titleBar{ 
+    background-color: #000;
+    color: #fff;
+    height: 65px;
+    font-family: 'Moonflower', sans-serif;
+    font-size: 2.5em;
+}
+
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+.nav {
+    float: right;
+    position: relative;
+    bottom: 10px;
+    font-size: .7em;    
+}
+
+.nav a, a:visited{
+    color: #a7a9ab;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav li {
+    display: inline-block;
+    color: #a7a9ab;
+    padding-right: 50px;
+}
+.content {
+    background-image: url('images/bg1.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 575px;
+    overflow: hidden;
+    position: relative;
+    top: -22px; 
+    font-family: 'Argh';
+}
+/*pop up styling */
+#mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: RGBa(0, 0, 0, .8);
+  display: none;
+}
+
+#boxes .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 440px;
+  height: 200px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+  text-align: center;
+}
+
+#boxes #dialog {
+  width: 350px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #525760;
+  color: #fff;
+  font-family: 'Argh', sans-serif;
+  font-size: 15pt;
+  position: absolute;
+  left: 1000px;
+
+}
+
+#popupfoot {
+  font-size: 16pt;
+  position: absolute;
+  bottom: 35px;
+  width: 250px;
+  left: 50px;
+}
+
+ .btn {
+     font-family: 'Moonflower';
+     font-weight: bold;
+     font-size: 1.4em;
+     background-color: #a7a9ab;
+     border: 0px;
+    transition:  300ms ease-in-out;
+    -webkit-transition:  300ms ease-in-out;
+     text-decoration: underline;
+ }
+
+ .btn:hover {
+     background-color: #333;
+     color: #fff;
+     transition:  300ms ease-in-out;
+    -webkit-transition:  300ms ease-in-out;
+ }
+
+/*      modal styling               */
+
+.modal {
+	position: fixed;
+	font-family: 'Argh', Helvetica, sans-serif;
+	top: -50px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modal:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modal > div {
+	width: 950px;
+    height: 475px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	background: #525760;
+    overflow: scroll;
+    font-family: 'Argh';
+    color: #a7a9ab;
+    font-size: .9em;
+
+}
+
+.modal h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-family: 'Moonflower', Helvetica, sans-serif;
+}
+
+#modal-about img {
+    height: 50%;
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+
+.close {
+	color: #a7a9ab;
+	line-height: 25px;
+	position: absolute;
+	right: 40px;
+	text-align: center;
+	top: 26px;
+	text-decoration: none;
+    font-family: 'Moonflower';
+    font-size: 2em;
+}
+
+/* pins */
+
+ .pins {
+    height: 20%;
+}
+ #soulshine-pin {
+     position: absolute;
+     left: 300px;
+     top: 100px;
+ }
+
+/* pins content */
+    .ss-info {
+        position: relative;
+        top: -40px;
+        font-family: 'Moonflower';
+        font-size: 1.4em;
+    }
+    
+    iframe {
+        float: right;
+    }
+
+/* legend styling */
+
+ .legend {
+    width: 200px;
+    height: 55px;
+    background-color: #000;
+    xoverflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    margin: 10px;
+    color: #a7a9ab;
+    transition-duration: 100ms;
+  }
+
+  #legend-title {
+    font-family: 'Moonflower';
+    font-size: 3.1em;
+    padding: 10px;
+  }
+
+  .openLegend {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    bottom: 0;
+    xleft: 0;
+    background-color: #000;
+    xtransition-duration: 500ms;
+    transition-timing-function: linear;
+}
+
+#spin {
+    height: 45px;
+    width: 45px;
+    float: right;
+    top: -5px;
+    position: relative;
+    padding: 10px;
+}
+
+ .legend-content {
+    position: relative;
+    left: -30px;
+    font-family: 'Moonflower';
+    font-size: 1.9em;
+     top: -30px;
+ }
+
+.legend-content ul li {
+    padding: 10px;
+}
+
+.legend-colors {
+    height: 30px;
+    width: 40px; 
+}
+
